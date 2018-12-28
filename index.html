@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Permutation Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+<script src="two.js"></script>
+<script src="jquery.js"></script>
+<script src="groups.js"></script>
+<body>
+    <div class="flex">
+        <div class="flex flex-column w-25">
+          <div class="bb bw1 w-100 pa3 mr2 tc" id="colorpicker">
+          </div>
+          <div class="bb bw1 w-100 pa3 mr2 tc" id="sg_menu_div">
+            <select id="subgroup_menu" autocomplete="off"> 
+              <option value="id">Identity</option>
+              <option value="z5">Z5 (rotations)</option>
+              <option value="d5">D5 (rotations and reflections)</option>
+              <option value="z4">Z4 in S5</option>
+              <option value="s4">S4 in S5</option>
+              <option value="s5">S5 (whole group)</option>
+          </select>
+      </div>
+      <div class="sans-serif pa2" id="instructions">
+        <p class="f5 tc"> This tool helps visualize group actions on a set of points. Click on the points above to cycle through the available colors. Once you've chosen a coloring, select a subgroup from the dropdown to see the images of that coloring under the action of the subgroup. You can change the subgroup or the coloring whenever you want and the display will update.
+        </p>
+    </div>
+</div>
+<div class="flex outline w-75 pa3 overflow-scroll flex-wrap bl bw1" style="height:664px" id="img_display">
+</div>
+</div>
+<canvas id="img_canvas" style="display: none">
+</canvas>
+<script src="permutations.js"></script>
+</body>
+</html>
